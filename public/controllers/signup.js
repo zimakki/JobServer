@@ -1,8 +1,12 @@
-jobs.controller('signup', function ($scope, $location) {
+jobs.controller('signup', function ($scope, $location, signupFactory) {
     $scope.user = {
         username: '',
         password: '',
         fullname: '',
         privilege: ''
+    }
+
+    $scope.save = funtion() {
+        signupFactory.signup($scope)
     }
 })
