@@ -1,4 +1,4 @@
-jobs.controller('signup', function ($scope, $location) {
+jobs.controller('signup', function ($scope, $location, signupFactory) {
     $scope.user = {
         username: '',
         password: '',
@@ -6,7 +6,7 @@ jobs.controller('signup', function ($scope, $location) {
         privilege: ''
     }
 
-    $scope.save = funtion(){
+    $scope.save = funtion() {
 
     }
 })
