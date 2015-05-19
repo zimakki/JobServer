@@ -12,16 +12,16 @@ describe('Signup test fixture', function () {
 
     it('should not be empty', function () {
         scope.user = {
-            username: '',
-            password: '',
-            fullname: '',
-            privilege: ''
+            username: 'username',
+            password: 'password',
+            fullname: 'fullname',
+            privilege: 'privilege'
         }
         expect(scope.user).toEqual({
-            username: '',
-            password: '',
-            fullname: '',
-            privilege: ''
+            username: 'username',
+            password: 'password',
+            fullname: 'fullname',
+            privilege: 'privilege'
         });
     })
 })
