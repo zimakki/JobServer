@@ -7,6 +7,6 @@ jobs.controller('signup', function ($scope, signupFactory) {
     }
 
     $scope.save = function () {
-        //// signupFactory.signup($scope)
+        signupFactory.signup($scope)
     }
 })
