@@ -4,7 +4,7 @@ describe('Signup test fixture', function () {
     var scope, signupFactory;
 
     beforeEach(function () {
-        signupFactory = {
+        signupFactoryMock = {
             signup: function () {}
         }
     })
@@ -13,7 +13,7 @@ describe('Signup test fixture', function () {
         scope = $rootScope.$new();
         login = $controller('signup', {
             $scope: scope,
-            signupFactory: signupFactory
+            signupFactory: signupFactoryMock
         });
     }));
 
