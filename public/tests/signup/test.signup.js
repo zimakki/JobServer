@@ -18,7 +18,10 @@ describe('Signup test fixture', function () {
             privilege: ''
         }
         expect(scope.user).toEqual({
-
+            username: '',
+            password: '',
+            fullname: '',
+            privilege: ''
         });
     })
 })
