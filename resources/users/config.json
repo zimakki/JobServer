@@ -1,19 +1,19 @@
 {
 	"type": "UserCollection",
 	"properties": {
-		"name": {
-			"name": "name",
+		"fullname": {
+			"name": "fullname",
 			"type": "string",
 			"typeLabel": "string",
 			"required": true,
-			"id": "name",
+			"id": "fullname",
 			"order": 0
 		},
 		"privilege": {
 			"name": "privilege",
 			"type": "string",
 			"typeLabel": "string",
-			"required": false,
+			"required": true,
 			"id": "privilege",
 			"order": 1
 		}
