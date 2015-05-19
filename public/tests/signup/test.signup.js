@@ -1,7 +1,13 @@
 describe('Signup test fixture', function () {
     beforeEach(module('jobs'));
 
-    var scope, mockDependency;
+    var scope, signupFactory;
+
+    beforeEach(function () {
+        signupFactory = {
+            signup: function () {}
+        }
+    })
 
     beforeEach(inject(function ($rootScope, $controller) {
         scope = $rootScope.$new();

@@ -1,4 +1,4 @@
-jobs.controller('signup', function ($scope, $location) {
+jobs.controller('signup', function ($scope) {
     $scope.user = {
         username: '',
         password: '',
