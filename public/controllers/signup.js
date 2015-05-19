@@ -5,4 +5,8 @@ jobs.controller('signup', function ($scope, $location) {
         fullname: '',
         privilege: ''
     }
+
+    $scope.save = funtion(){
+
+    }
 })
