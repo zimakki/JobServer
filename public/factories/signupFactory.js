@@ -1,13 +1,7 @@
-jobs.factory('signupFactory', function ($rootScope) {
+jobs.factory('signupFactory', function () {
     return {
-        signup: function (scope) {
-            dpd.restaurants.post(scope.restaurant, function (result, err) {
-                if (err) {
+        signup: function () {
 
-                } else {
-
-                }
-            });
         }
     }
 })

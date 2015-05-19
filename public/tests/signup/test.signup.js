@@ -13,7 +13,7 @@ describe('Signup test fixture', function () {
         scope = $rootScope.$new();
         login = $controller('signup', {
             $scope: scope,
-            $controller
+            signupFactory: signupFactory
         });
     }));
 
