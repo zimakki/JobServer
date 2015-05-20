@@ -18,7 +18,7 @@
         "heroku",
         "Deployd",
         "dpd",
-        "api",
+        "api"
     ],
     "license": "MIT"
 }
