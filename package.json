@@ -13,7 +13,7 @@
         "node": "0.12.3"
     },
     "repository": {
-        "type": "git",
+        "type": "",
         "url": ""
     },
     "keywords": [
