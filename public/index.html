@@ -3,7 +3,6 @@
 
 <head>
     <link href="lib/css/bootstrap.css" rel="stylesheet">
-    <script type="text/javascript" src="dpd.js"></script>
 </head>
 
 <body>
@@ -20,20 +19,26 @@
                     <span class="icon-bar"></span>
                 </button>
             </div>
+            <div class="collapse navbar-collapse">
+                <ul ng-include="'views/menuPartials/defaultMenu.html'"></ul>
+            </div>
         </div>
-    </div>
-
-    <script src="lib/js/angular.min.js"></script>
-    <script src="lib/js/angular-route.min.js"></script>
-
-    <!-- Controllers -->
-    <script src="app.js"></script>
-    <script src="controllers/login.js"></script>
-    <script src="controllers/signup.js"></script>
 
 
-    <!-- Factories -->
-    <script src="factories/signupFactory.js"></script>
+
+        <script src="lib/js/angular.min.js"></script>
+        <script src="lib/js/angular-route.min.js"></script>
+
+        <script type="text/javascript" src="dpd.js"></script>
+
+        <!-- Controllers -->
+        <script src="app.js"></script>
+        <script src="controllers/login.js"></script>
+        <script src="controllers/signup.js"></script>
+
+
+        <!-- Factories -->
+        <script src="factories/signupFactory.js"></script>
 </body>
 
 </html>
