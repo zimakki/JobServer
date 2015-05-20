@@ -1,0 +1,23 @@
+{
+    "name": "jobserver",
+    "version": "0.0.1",
+    "description": "A sample Node.js app using Express 4",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js"
+    },
+    "dependencies": {
+        "deployd": "git://github.com/deployd/deployd.git#v0.8.0-rc.3"
+    },
+    "engines": {
+        "node": "0.12.2"
+    },
+    "keywords": [
+        "node",
+        "heroku",
+        "Deployd",
+        "dpd",
+        "api"
+    ],
+    "license": "MIT"
+}
