@@ -3,4 +3,6 @@ jobs.controller('login', function ($scope, $location) {
         username: '',
         password: ''
     }
+
+    $scope.login = function () {}
 })
