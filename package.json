@@ -1,20 +1,24 @@
 {
     "name": "jobserver",
     "version": "0.0.1",
-    "description": "Demo of Deployd running on Heroku",
+    "description": "A sample Node.js app using Express 4",
     "main": "server.js",
     "scripts": {
         "start": "node server.js"
     },
+    "dependencies": {
+        "express": "~4.9.x",
+        "deployd": "git://github.com/deployd/deployd.git#v0.8.0-rc.3"
+    },
+    "engines": {
+        "node": "0.12.2"
+    },
     "keywords": [
+        "node",
+        "heroku",
         "Deployd",
         "dpd",
         "api",
-        "heroku"
     ],
-    "author": "Hamid Abdulmalik",
-    "license": "MIT",
-    "dependencies": {
-        "deployd": "git://github.com/deployd/deployd.git#v0.8.0-rc.3"
-    }
+    "license": "MIT"
 }
