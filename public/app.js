@@ -1,2 +1,1 @@
-var jobs = angular.module('jobs', []);
-
+var jobs = angular.module('jobs', ['ngRoute']);
