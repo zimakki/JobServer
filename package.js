@@ -10,7 +10,7 @@
         "deployd": "0.8.x"
     },
     "engines": {
-        "node": "0.12.2"
+        "node": "0.12.3"
     },
     "repository": {
         "type": "git",
