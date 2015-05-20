@@ -14,7 +14,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/zimakki/JobServer"
+        "url": ""
     },
     "keywords": [
         "node",
