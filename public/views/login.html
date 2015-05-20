@@ -12,19 +12,19 @@
             <p>
                 <div class="input-field">
                     <i class="mdi-action-account-circle prefix"></i>
-                    <input id="icon_prefix" type="text" required autofocus>
+                    <input id="icon_prefix" type="text" ng-model="user.username" required autofocus>
                     <label for="icon_prefix">user</label>
                 </div>
             </p>
             <p>
                 <div class="input-field">
                     <i class="mdi-action-lock-outline prefix"></i>
-                    <input id="icon_lock" type="password" required>
+                    <input id="icon_lock" type="password" ng-model="user.password" required>
                     <label for="icon_lock">password</label>
                 </div>
             </p>
 
-            <a class="btn btn-success">
+            <a class="btn btn-success" ng-click="login()">
                 Login
             </a>
         </div>
