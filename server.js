@@ -1,6 +1,6 @@
 var deployd = require('deployd');
 
-var dpd = deployd(
+var dpd = deployd({
     db: {
         host: 'ds031832.mongolab.com',
         port: 31832,
@@ -9,6 +9,7 @@ var dpd = deployd(
             username: 'hamidabdulmalik',
             password: 'mi566666'
         }
-    });
+    }
+});
 
 dpd.listen();
