@@ -25,7 +25,9 @@ jobs.controller('menu', function ($scope, $rootScope, $location) {
     };
 
     $scope.logout = function () {
-        $rootScope.showMainMenu = true;
-        $location.path('/');
+        dpd.users.logout(function (result, error) {
+            $rootScope.showMainMenu = true;
+            $rootScope.showAdminMenu = false;
+        });
     };
 });
