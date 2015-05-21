@@ -9,7 +9,7 @@ jobs.controller('menu', function ($scope, $rootScope, $location) {
                 $rootScope.showAdminMenu = true;
                 break
 
-            case '':
+            default:
                 $rootScope.showMainMenu = true;
                 $rootScope.showAdminMenu = false;
                 break
