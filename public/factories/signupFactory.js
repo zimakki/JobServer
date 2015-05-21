@@ -8,6 +8,22 @@ jobs.factory('signupFactory', function ($rootScope) {
 
                 }
             });
+        },
+
+        watchSession: function () {
+            dpd.users.me(function (result, error) {
+                if (result) {
+                    switch (result.privilege) {
+                    case 'Admin':
+                        $rootScope.showMainMenu = false;
+                        $rootScope.showAdminMenu = true;
+                        break
+                    }
+                } else {
+                    $rootScope.showMainMenu = true;
+                    $rootScope.showAdminMenu = false;
+                }
+            });
         }
     }
 })
