@@ -28,6 +28,7 @@ jobs.factory('signupFactory', function ($rootScope, $q,$location) {
                     } else {
                         $rootScope.showMainMenu = true;
                         $rootScope.showAdminMenu = false;
+                        $location.path('/login')
                     }
                 })
                 defer.resolve(result)
