@@ -1,6 +1,23 @@
 jobs.controller('menu', function ($scope, $rootScope, $location) {
 
-    $rootScope.showMainMenu = true;
+    dpd.users.me(function (result, error) {
+        if (result) {
+            alert(JSON.stringify(result))
+            switch (result.privilege) {
+            case 'Admin':
+                $rootScope.showMainMenu = false;
+                $rootScope.showAdminMenu = true;
+                break
+
+            case '':
+                $rootScope.showMainMenu = true;
+                $rootScope.showAdminMenu = false;
+                break
+            }
+        }
+    });
+
+
 
 
     $scope.isActive = function (viewLocation) {
