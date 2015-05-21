@@ -22,7 +22,7 @@ jobs.factory('signupFactory', function ($rootScope, $q,$location) {
                         case 'Admin':
                             $rootScope.showMainMenu = false;
                             $rootScope.showAdminMenu = true;
-                            $location.path('/admin_companiesg')
+                            $location.path('/admin_companies')
                             break
                         }
                     } else {
