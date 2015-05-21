@@ -1,19 +1,16 @@
-jobs.controller('menu', function ($scope, $rootScope, $location) {
+jobs.controller('menu', function ($scope, $rootScope, $location, $q) {
 
     dpd.users.me(function (result, error) {
         if (result) {
-            alert(JSON.stringify(result))
             switch (result.privilege) {
             case 'Admin':
                 $rootScope.showMainMenu = false;
                 $rootScope.showAdminMenu = true;
                 break
-
-            default:
-                $rootScope.showMainMenu = true;
-                $rootScope.showAdminMenu = false;
-                break
             }
+        } else {
+            $rootScope.showMainMenu = true;
+            $rootScope.showAdminMenu = false;
         }
     });
 
@@ -25,7 +22,13 @@ jobs.controller('menu', function ($scope, $rootScope, $location) {
     };
 
     $scope.logout = function () {
-        $rootScope.showMainMenu = true;
-        $location.path('/');
+        var defer = $q.defer()
+        dpd.users.logout(function (result, error) {
+            defer.promise.then(function () {
+                $rootScope.showMainMenu = true;
+                $rootScope.showAdminMenu = false;
+            })
+            defer.resolve()
+        });
     };
 });
