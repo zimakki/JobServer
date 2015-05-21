@@ -1,4 +1,4 @@
-jobs.controller('menu', function ($scope, $rootScope, $location) {
+jobs.controller('menu', function ($scope, $rootScope, $location, $q) {
 
     dpd.users.me(function (result, error) {
         if (result) {
@@ -22,9 +22,13 @@ jobs.controller('menu', function ($scope, $rootScope, $location) {
     };
 
     $scope.logout = function () {
+        var defer = $q.defer()
         dpd.users.logout(function (result, error) {
-            $rootScope.showMainMenu = true;
-            $rootScope.showAdminMenu = false;
+            defer.promise.then(function () {
+                $rootScope.showMainMenu = true;
+                $rootScope.showAdminMenu = false;
+            })
+            defer.resolve()
         });
     };
 });
