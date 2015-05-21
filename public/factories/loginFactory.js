@@ -8,6 +8,8 @@ jobs.factory('loginFactory', function ($rootScope, $location, signupFactory) {
                 } else {
                     alert(JSON.stringify(result))
                 }
+                signupFactory.watchSession()
+
             })
         }
     }
