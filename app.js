@@ -6,8 +6,8 @@ jobs.config(function ($routeProvider) {
     }).when('/signup', {
         controller: 'signup',
         templateUrl: 'views/signup.html'
-    }).when('/companies', {
-        controller: 'companies',
-        templateUrl: 'views/companies.html'
+    }).when('/admin_companies', {
+        controller: 'admin_companies',
+        templateUrl: 'views/admin_companies.html'
     })
 })
