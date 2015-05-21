@@ -1,6 +1,6 @@
 jobs.controller('menu', function ($scope, $rootScope, $location, $q, signupFactory) {
 
-
+    signupFactory.watchSession()
     $scope.isActive = function (viewLocation) {
         return viewLocation === $location.path();
     };
