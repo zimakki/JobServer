@@ -16,6 +16,7 @@ jobs.factory('signupFactory', function ($rootScope, $q) {
             dpd.users.me(function (result, error) {
 
                 defer.promise.then(function (result) {
+                    $rootScope.fullname = result.fullname;
                     if (result) {
                         switch (result.privilege) {
                         case 'Admin':
