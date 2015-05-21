@@ -1,5 +1,10 @@
 jobs.controller('menu', function ($scope, $rootScope, $location) {
 
+    dpd.users.me(function (result, error) {
+        if (result) {
+            alert(JSON.stringify(result))
+        }
+    });
 
     switch ($rootScope.user.privilege) {
     case 'Admin':
