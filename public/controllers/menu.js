@@ -1,20 +1,4 @@
-jobs.controller('menu', function ($scope, $rootScope, $location, $q) {
-
-    dpd.users.me(function (result, error) {
-        if (result) {
-            switch (result.privilege) {
-            case 'Admin':
-                $rootScope.showMainMenu = false;
-                $rootScope.showAdminMenu = true;
-                break
-            }
-        } else {
-            $rootScope.showMainMenu = true;
-            $rootScope.showAdminMenu = false;
-        }
-    });
-
-
+jobs.controller('menu', function ($scope, $rootScope, $location, $q, signupFactory) {
 
 
     $scope.isActive = function (viewLocation) {
