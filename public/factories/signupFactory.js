@@ -1,4 +1,4 @@
-jobs.factory('signupFactory', function ($rootScope) {
+jobs.factory('signupFactory', function ($rootScope, $q) {
     return {
         signup: function (sope) {
             dpd.users.post(scope.user, function (result, err) {
@@ -7,6 +7,29 @@ jobs.factory('signupFactory', function ($rootScope) {
                 } else {
 
                 }
+            });
+        },
+
+        watchSession: function () {
+            var defer = $q.defer()
+
+            dpd.users.me(function (result, error) {
+
+                defer.promise.then(function (result) {
+                    if (result) {
+                        switch (result.privilege) {
+                        case 'Admin':
+                            $rootScope.showMainMenu = false;
+                            $rootScope.showAdminMenu = true;
+                            break
+                        }
+                    } else {
+                        $rootScope.showMainMenu = true;
+                        $rootScope.showAdminMenu = false;
+                    }
+                })
+                defer.resolve(result)
+
             });
         }
     }
