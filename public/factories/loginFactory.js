@@ -1,4 +1,4 @@
-jobs.factory('loginFactory', function ($rootScope, $location) {
+jobs.factory('loginFactory', function ($rootScope, $location, signupFactory) {
     return {
         login: function (scope) {
 
