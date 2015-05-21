@@ -1,4 +1,4 @@
-jobs.factory('signupFactory', function ($rootScope) {
+jobs.factory('signupFactory', function ($rootScope, $q) {
     return {
         signup: function (sope) {
             dpd.users.post(scope.user, function (result, err) {
