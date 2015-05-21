@@ -1,6 +1,17 @@
 jobs.controller('menu', function ($scope, $rootScope, $location) {
 
-    $rootScope.showMainMenu = true;
+
+    switch ($rootScope.user.privilege) {
+    case 'Admin':
+        $rootScope.showMainMenu = false;
+        $rootScope.showAdminMenu = true;
+        break
+
+    case '':
+        $rootScope.showMainMenu = true;
+        $rootScope.showAdminMenu = false;
+        break
+    }
 
 
     $scope.isActive = function (viewLocation) {
