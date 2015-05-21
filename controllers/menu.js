@@ -11,6 +11,7 @@ jobs.controller('menu', function ($scope, $rootScope, $location, $q, signupFacto
             defer.promise.then(function () {
                 $rootScope.showMainMenu = true;
                 $rootScope.showAdminMenu = false;
+                $location.path('/login')
             })
             defer.resolve()
         });
