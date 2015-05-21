@@ -1,4 +1,4 @@
-jobs.factory('signupFactory', function ($rootScope, $q) {
+jobs.factory('signupFactory', function ($rootScope, $q,$location) {
     return {
         signup: function (sope) {
             dpd.users.post(scope.user, function (result, err) {
@@ -22,6 +22,7 @@ jobs.factory('signupFactory', function ($rootScope, $q) {
                         case 'Admin':
                             $rootScope.showMainMenu = false;
                             $rootScope.showAdminMenu = true;
+                            $location.path('/admin_companiesg')
                             break
                         }
                     } else {
