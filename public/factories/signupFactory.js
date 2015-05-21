@@ -11,18 +11,25 @@ jobs.factory('signupFactory', function ($rootScope, $q) {
         },
 
         watchSession: function () {
+            var defer = $q.defer()
+
             dpd.users.me(function (result, error) {
-                if (result) {
-                    switch (result.privilege) {
-                    case 'Admin':
-                        $rootScope.showMainMenu = false;
-                        $rootScope.showAdminMenu = true;
-                        break
+
+                defer.promise.then(function (result) {
+                    if (result) {
+                        switch (result.privilege) {
+                        case 'Admin':
+                            $rootScope.showMainMenu = false;
+                            $rootScope.showAdminMenu = true;
+                            break
+                        }
+                    } else {
+                        $rootScope.showMainMenu = true;
+                        $rootScope.showAdminMenu = false;
                     }
-                } else {
-                    $rootScope.showMainMenu = true;
-                    $rootScope.showAdminMenu = false;
-                }
+                })
+                defer.resolve(result)
+
             });
         }
     }
