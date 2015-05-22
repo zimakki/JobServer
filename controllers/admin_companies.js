@@ -1,3 +1,2 @@
-jobs.controller('companies',function($scope,$location){
-
-})
+jobs.controller('admin_companies',function($scope,$location){
+});
