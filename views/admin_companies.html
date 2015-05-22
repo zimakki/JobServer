@@ -17,7 +17,17 @@
     <hr>
     <div class="ui cards">
         <div class="card" ng-repeat="all_companies in companies">
-            
+            <div class="content">
+                <div class="header">{{all_companies.name}}</div>
+                    <div class="description">
+                        {{all_companies.description}}
+                    </div>
+                </div>
+                <div class="ui bottom attached button">
+                    <i class="add icon"></i>
+                        Add Job
+                </div>
+            </div>
         </div>
     </div>
 </div>
