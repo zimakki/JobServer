@@ -3,4 +3,8 @@ jobs.controller('admin_companies',function($scope,$location,companiesFactory){
         name:'',
         description:''
     };
+    
+    $scope.save = function(){
+        companiesFactory.saveCompany($scope)
+    }
 });
