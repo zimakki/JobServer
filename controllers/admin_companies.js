@@ -6,6 +6,8 @@ jobs.controller('admin_companies',function($scope,$location,companiesFactory){
     
     $scope.companies = []
     
+    companiesFactory.getCompanies($scope)
+    
     $scope.save = function(){
         companiesFactory.saveCompany($scope)
     }
