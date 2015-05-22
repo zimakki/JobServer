@@ -15,8 +15,14 @@ jobs.factory('companiesFactory', function ($rootScope, $location, $q) {
         },
 
         getCompanies: function (scope) {
+            var defer = $q.defer()
             dpd.companies.get({}, function (result, error) {
-                scope.companies = result;
+                
+                defer.promise.then(function(result){
+                    scope.companies = result;
+                })
+                defer.resolve(result)
+                
             })
         }
     }
