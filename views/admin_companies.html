@@ -15,20 +15,17 @@
     <br>
     <br>
     <hr>
-    <div class="ui three column grid">
-        <div class="column" ng-repeat="all_companies in companies">
-            <div class="ui raised segment">
-                <a class="ui green ribbon label">{{all_companies.name}}</a>
-            <div style="height:50px">
-                <p id="truncate">
-                    {{all_companies.description}}
-                </p>
-               
+    <div class="ui cards">
+        <div class="card" ng-repeat="all_companies in companies" style="width:324px">
+			<div class="content">
+                <div class="ui top attached label massive">{{all_companies.name}}</div>
+                <div class="description" style="height:50px">
+                    <p id="truncate">{{all_companies.description}}</p>
+                </div>
             </div>
+        </div>
     </div>
-  </div>
-    </div>
-    </div>
+
     
      <script>
         var module = document.getElementById("truncate");
