@@ -15,23 +15,18 @@
     <br>
     <br>
     <hr>
-    <div class="ui cards">
-        <div class="card" style="width:323px" ng-repeat="all_companies in companies">
-            <div class="content">
-                <div class="header">{{all_companies.name}}</div>
-                    <div class="description truncate">
-                        {{all_companies.description}}
-                    </div>
-                </div>
-                <div class="ui bottom attached button addjob">
-                    <i class="add icon"></i>
-                        Add Job
-                </div>
+    <div class="ui three column grid">
+        <div class="column" ng-repeat="all_companies in companies">
+            <div class="ui raised segment">
+                <a class="ui green ribbon label">{{all_companies.name}}</a>
+            <div class="truncate" style="height:100px">
+                <p>
+                    {{all_companies.description}}
+                </p>
             </div>
-        </div>
-        
     </div>
-
+  </div>
+    </div>
 
 <div class="ui custom popup flowing" 
     style="width:500px" 
