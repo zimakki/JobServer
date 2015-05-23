@@ -19,14 +19,21 @@
         <div class="column" ng-repeat="all_companies in companies">
             <div class="ui raised segment">
                 <a class="ui green ribbon label">{{all_companies.name}}</a>
-            <div class="truncate" style="height:100px">
-                <p>
+            <div style="height:100px">
+                <p id="truncate">
                     {{all_companies.description}}
                 </p>
+               
             </div>
     </div>
   </div>
     </div>
+    </div>
+    
+     <script>
+                    var module = document.getElementById("truncate");
+                    $clamp(module, {clamp: 3});
+                </script>
 
 <div class="ui custom popup flowing" 
     style="width:500px" 
