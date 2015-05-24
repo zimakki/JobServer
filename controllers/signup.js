@@ -3,7 +3,7 @@ jobs.controller('signup', function ($scope, signupFactory) {
         username: '',
         password: '',
         fullname: '',
-        privilege: ''
+        privilege: 'User'
     }
 
     $scope.save = function () {
