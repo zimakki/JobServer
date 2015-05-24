@@ -1,39 +1,39 @@
-<form name="signupForm">
-    <div class="panel panel-default" style="max-width:500px;margin:auto">
-        <div class="panel-heading">Signup</div>
-        <div class="panel-body">
-
-            <div ng-show="showError" class="alert alert-dismissible alert-danger">
-                <button type="button" class="close" data-dismiss="alert">×</button>
-                <strong>Error!</strong> Illegal
-            </div>
-
-
-            <p>
-                <div class="input-field">
-                    <i class="mdi-action-account-circle prefix"></i>
-                    <input id="icon_prefix" type="text" required autofocus>
-                    <label for="icon_prefix">fullname</label>
-                </div>
-            </p>
-            <p>
-                <div class="input-field">
-                    <i class="mdi-communication-email prefix"></i>
-                    <input id="icon_prefix" type="text" required autofocus>
-                    <label for="icon_prefix">email</label>
-                </div>
-            </p>
-            <p>
-                <div class="input-field">
-                    <i class="mdi-action-lock-outline prefix"></i>
-                    <input id="icon_lock" type="password" required>
-                    <label for="icon_lock">password</label>
-                </div>
-            </p>
-
-            <a class="btn btn-success">
-                Signup
-            </a>
-        </div>
-    </div>
-</form>
+<div class="ui page grid">
+	<div class="row">
+		<div class="column">
+			<form class="ui form raised fluid segment" name="signupForm" style="max-width:500px;margin:auto">
+				<h5>Signup</h5>
+				<div class="ui divider"></div>
+				<div class="required field">
+					<label>Fullname</label>
+					<div class="ui big icon input">
+						<input placeholder="fullname" type="text" ng-model="user.fullname" required autofocus>
+						<i class="user icon"></i>
+					</div>
+				</div>
+				<div class="required field">
+					<label>Email</label>
+					<div class="ui big icon input">
+						<input placeholder="you@email.com" type="text" ng-model="user.username" required autofocus>
+						<i class="mail icon"></i>
+					</div>
+				</div>
+				<div class="required field">
+					<label>Password</label>
+					<div class="ui big icon input">
+						<input type="password" ng-model="user.password" required>
+						<i class="lock icon"></i>
+					</div>
+				</div>
+				<div class="required field">
+					<label>Retype Password</label>
+					<div class="ui big icon input">
+						<input type="password" ng-model="passwordRetype" required>
+						<i class="lock icon"></i>
+					</div>
+				</div>
+				<input class="btn btn-success" type="submit" value="signup" ng-disabled="signupForm.$invalid" ng-click="signup()"/>
+			</form>
+		</div>
+	</div>
+</div>
