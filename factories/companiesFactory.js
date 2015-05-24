@@ -4,7 +4,7 @@ jobs.factory('companiesFactory', function ($rootScope, $location, $q) {
             var defer = $q.defer();
             
             dpd.companies.post(scope.company, function (result, error) {
-                
+
                 defer.promise.then(function(result){
                     $rootScope.companies.push(result);
                     scope.company.name = '';
