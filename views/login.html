@@ -1,30 +1,25 @@
-<form name="loginForm">
-    <div class="panel panel-default" style="width:500px;margin:auto">
-        <div class="panel-heading">Login</div>
-        <div class="panel-body">
-
-            <div ng-show="showError" class="alert alert-dismissible alert-danger">
-                <button type="button" class="close" data-dismiss="alert">×</button>
-                <strong>Error!</strong> Illegal login
-            </div>
-
-
-            <p>
-                <div class="input-field">
-                    <i class="mdi-action-account-circle prefix"></i>
-                    <input id="icon_prefix" type="text" ng-model="user.username" required autofocus>
-                    <label for="icon_prefix">user</label>
-                </div>
-            </p>
-            <p>
-                <div class="input-field">
-                    <i class="mdi-action-lock-outline prefix"></i>
-                    <input id="icon_lock" type="password" ng-model="user.password" required>
-                    <label for="icon_lock">password</label>
-                </div>
-            </p>
-
-            <input class="btn btn-success" type="submit" ng-click="login()" ng-disabled="loginForm.$invalid" value="login">
-        </div>
-    </div>
-</form>
+<div class="ui page grid">
+	<div class="row">
+		<div class="column">
+			<form class="ui form raised fluid segment" name="loginForm" style="max-width:500px;margin:auto">
+				<h5>Login</h5>
+				<div class="ui divider"></div>
+				<div class="required field">
+					<label>Email</label>
+					<div class="ui icon input">
+						<input placeholder="user@email.com" type="text" ng-model="user.email" required autofocus>
+						<i class="mail icon"></i>
+					</div>
+				</div>
+				<div class="required field">
+					<label>Password</label>
+					<div class="ui icon input">
+						<input type="password" ng-model="user.password" required>
+						<i class="lock icon"></i>
+					</div>
+				</div>
+				<input class="btn btn-success" type="submit" value="login" ng-disabled="loginForm.$invalid" ng-click="login()"/>
+			</form>
+		</div>
+	</div>
+</div>
