@@ -1,15 +1,20 @@
-jobs.factory('loginFactory', function ($rootScope, $location, signupFactory) {
+jobs.factory('loginFactory', function ($rootScope, $location, signupFactory,$q) {
     return {
         login: function (scope) {
-
+            
+            var defer = $q.defer()
+            
             dpd.users.login(scope.user, function (result, error) {
-                if (error) {
-                    $rootScope.loader = ""
-                } else {
-                    //alert(JSON.stringify(result))
-                }
-                signupFactory.watchSession()
-
+                defer.promise.then(function(error){
+                    if (error) {
+                        $rootScope.loader = ""
+                        $rootScope.showError = true;
+                    } else {
+                        //alert(JSON.stringify(result))
+                    }
+                    signupFactory.watchSession()
+                })
+                defer.resolve(error)
             })
         }
     }

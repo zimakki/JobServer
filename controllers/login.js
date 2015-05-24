@@ -2,6 +2,7 @@ jobs.controller('login', function ($scope, $rootScope, $location, loginFactory) 
     
     
     $rootScope.loader = ""
+    $rootScope.showError = false;
     
     $scope.user = {
         username: '',

@@ -4,6 +4,19 @@
 			<form class="ui form {{loader}} raised fluid segment" name="loginForm" style="max-width:500px;margin:auto">
 				<h5>Login</h5>
 				<div class="ui divider"></div>
+				
+				<div class="ui negative message" ng-show="showError">
+                    <i class="close icon"></i>
+                        <div class="header">
+                            Semething went wrong!!!
+                        </div>
+                         <ul class="list">
+                            <li>Your login information is incorrect.</li>
+                            <li>Check your internet connection.</li>
+                        </ul>
+                </div>
+				<div class="ui divider" ng-show="showError"></div>
+				
 				<div class="required field">
 					<label>Email</label>
 					<div class="ui big icon input">
