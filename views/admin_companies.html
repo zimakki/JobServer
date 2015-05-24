@@ -24,18 +24,28 @@
                 </div>
                 <hr>
                 <div>
-                    <button class="btn btn-success">new job</button>
+                    <button class="btn btn-success" href="#modal1">new job</button>
                 </div>
             </div>
         </div>
     </div>
-
+</div>
     
-     <script>
-        var module = document.getElementById("truncate");
-        $clamp(module, {clamp: 3});
-    </script>
+    
+
+
+<div id="modal1" class="modal" style="width:400px" ng-include="'views/partials/new_job_partial.html'"></div>
+
+
+
+
 
 <div class="ui custom popup flowing" 
     style="width:500px" 
-    ng-include="'views/partials/new_company_partial.html'"></div>
+    ng-include="'views/partials/new_company_partial.html'">
+</div>
+
+<script>
+    var module = document.getElementById("truncate");
+        $clamp(module, {clamp: 3});
+</script>
