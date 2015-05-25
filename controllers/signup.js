@@ -6,6 +6,8 @@ jobs.controller('signup', function ($scope, signupFactory) {
         privilege: 'User'
     }
     
+    $scope.showError = false;
+    
     $scope.passwordRetype = ''
     $scope.loader = ''
 
