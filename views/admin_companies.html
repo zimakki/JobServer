@@ -1,0 +1,51 @@
+<div style="max-width:1000px;margin:auto">
+    <div style="width:200px; float:left">
+        <div class="input-field">
+            <i class="mdi-action-search prefix"></i>
+            <input id="icon_prefix" type="text" ng-model="name" autofocus>
+            <label for="icon_prefix">search</label>
+        </div>
+    </div>
+
+    <div style="float:right">
+        <a class="btn btn-success add">
+            Add New Company
+        </a>
+    </div>
+    <br>
+    <br>
+    <hr>
+    <div class="ui cards">
+        <div class="card" ng-repeat="all_companies in companies" style="width:324px">
+			<div class="content">
+                <div class="ui top attached label massive">{{all_companies.name}}</div>
+                <div class="description" style="height:50px">
+                    <p id="truncate">{{all_companies.description}}</p>
+                </div>
+                <hr>
+                <div>
+                    <button class="btn btn-success" href="#modal1">new job</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div id="modal1" class="modal" style="width:400px" ng-include="'views/partials/new_job_partial.html'"></div>
+
+
+
+
+
+<div class="ui custom popup flowing"
+    style="width:500px"
+    ng-include="'views/partials/new_company_partial.html'">
+</div>
+
+<script>
+    var module = document.getElementById("truncate");
+        $clamp(module, {clamp: 3});
+</script>

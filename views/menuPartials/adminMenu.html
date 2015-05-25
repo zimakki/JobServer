@@ -1,0 +1,26 @@
+<div class="nav navbar-nav pull-left">
+    <li ng-class="{ active: isActive('/')}">
+        <a href="#/">home</a>
+    </li>
+
+    <li ng-class="{ active: isActive('/admin_companies')}">
+        <a href="#/admin_companies">companies</a>
+    </li>
+
+    <li ng-class="{ active: isActive('/about')}">
+        <a href="#/about">about us</a>
+    </li>
+
+    <li ng-class="{ active: isActive('/contact')}">
+        <a href="#/contact">contact us</a>
+    </li>
+</div>
+
+<div class="nav navbar-nav pull-right">
+    <li>
+        <a>{{fullname}}</a>
+    </li>
+    <li ng-class="{ active: isActive('/')}">
+        <a ng-click="logout()">logout</a>
+    </li>
+</div>

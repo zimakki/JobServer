@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html ng-app="jobs">
+
+<head>
+    <link href="lib/dist/semantic.min.css" rel="stylesheet">
+    <link href="lib/css/bootstrap.css" rel="stylesheet">
+    <link href="lib/css/truncate.css" rel="stylesheet">
+
+    <script src="lib/js/jquery.js"></script>
+    <script src="lib/dist/semantic.min.js"></script>
+    <script src="lib/js/clamp.js"></script>
+
+     <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="initial-scale=1.0, width=device-width" name="viewport">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand">
+                    <span>Jobs</span>
+                </a>
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" ng-controller="menu">
+                <ul ng-show="showMainMenu" ng-include="'views/menuPartials/defaultMenu.html'"></ul>
+                <ul ng-show="showAdminMenu" ng-include="'views/menuPartials/adminMenu.html'"></ul>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <div class="container">
+        <div ng-view=""></div>
+    </div>
+
+
+    <script src="lib/js/angular.min.js"></script>
+    <script src="lib/js/angular-route.min.js"></script>
+
+    <script type="text/javascript" src="/dpd.js"></script>
+
+    <!-- Controllers -->
+    <script src="app.js"></script>
+    <script src="controllers/login.js"></script>
+    <script src="controllers/signup.js"></script>
+    <script src="controllers/menu.js"></script>
+    <script src="controllers/admin_companies.js"></script>
+
+
+    <!-- Factories -->
+    <script src="factories/signupFactory.js"></script>
+    <script src="factories/loginFactory.js"></script>
+    <script src="factories/companiesFactory.js"></script>
+</body>
+
+</html>

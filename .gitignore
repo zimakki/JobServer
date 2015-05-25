@@ -1,5 +1,33 @@
+<<<<<<< HEAD
 # https://git-scm.com/docs/gitignore
 # https://help.github.com/articles/ignoring-files
 # Example .gitignore files: https://github.com/github/gitignore
 /bower_components/
 /node_modules/
+=======
+b-cov
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+*.tgz
+
+pids
+logs
+results
+.DS_Store
+/node_modules
+npm-debug.log
+test/support/keys.json
+test/support/proj
+test-app/data
+bin/mongo
+bin/node
+examples/test/data
+.latestversion
+
+!bin/createtemplate/**
+>>>>>>> 3a6a0a97bd7db7b58c4d30a2358a6a01ccc25e79
