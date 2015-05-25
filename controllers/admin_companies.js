@@ -8,7 +8,8 @@ jobs.controller('admin_companies',function($scope,$location,$rootScope,companies
         companiesFactory.getCompanies($scope)
     }
     
-    $scope.addJob = function(){
+    $scope.addJob = function(index){
+        $rootScope.index = index; 
         $location.path('/job')
     }
 
