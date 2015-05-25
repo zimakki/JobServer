@@ -13,7 +13,7 @@
                 </div>
                 <div class="field">
                     <label>Description</label>
-                    <textarea></textarea>
+                    <textarea ng-model="job.description" required></textarea>
                 </div>
                 <input class="btn btn-success" type="submit" value="save" ng-disabled="jobForm.$invalid" ng-click="save()" />
             </form>
