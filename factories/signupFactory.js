@@ -1,12 +1,15 @@
 jobs.factory('signupFactory', function ($rootScope, $q,$location) {
     return {
         signup: function (sope) {
+            var defer = $q.defer()
+            
             dpd.users.post(scope.user, function (result, err) {
-                if (err) {
-
-                } else {
-
-                }
+                defer.promise.then(function(err){
+                    if (err) {
+                    } else {
+                    }
+                })
+                defer.resolve(err)
             });
         },
 
