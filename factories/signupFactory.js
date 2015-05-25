@@ -9,6 +9,7 @@ jobs.factory('signupFactory', function ($rootScope, $q,$location) {
                         scope.loader = ''
                         $scope.showError = true;
                     } else {
+                        $location.path('/login')
                     }
                 })
                 defer.resolve(err)
