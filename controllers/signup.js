@@ -7,6 +7,7 @@ jobs.controller('signup', function ($scope, signupFactory) {
     }
     
     $scope.passwordRetype = ''
+    $scope.loader = ''
 
     $scope.save = function () {
         signupFactory.signup($scope)
