@@ -7,7 +7,7 @@ jobs.factory('signupFactory', function ($rootScope, $q,$location) {
                 defer.promise.then(function(err){
                     if (err) {
                         scope.loader = ''
-                        $scope.showError = true;
+                        scope.showError = true;
                     } else {
                         $location.path('/login')
                     }
