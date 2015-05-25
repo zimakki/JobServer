@@ -24,21 +24,14 @@
                 </div>
                 <hr>
                 <div>
-                    <button class="btn btn-success" ng-click="addJob()">new job</button>
+                    <button class="btn btn-success" ng-click="addJob(companies.indexOf(all_companies))">new job</button>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
-
-
-
 <div id="modal1" class="modal" style="width:400px" ng-include="'views/partials/new_job_partial.html'"></div>
-
-
-
-
 
 <div class="ui custom popup flowing"
     style="width:500px"
