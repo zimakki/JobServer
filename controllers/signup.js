@@ -10,6 +10,7 @@ jobs.controller('signup', function ($scope, signupFactory) {
     $scope.loader = ''
 
     $scope.save = function () {
+        $scope.loader = 'loading'
         signupFactory.signup($scope)
     }
 })
