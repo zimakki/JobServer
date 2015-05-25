@@ -1,10 +1,10 @@
-jobs.factory('signupFactory', function ($rootScope, $q,$location) {
+jobs.factory('signupFactory', function ($rootScope, $q, $location) {
     return {
-        signup: function (sope) {
+        signup: function (scope) {
             var defer = $q.defer()
-            
+
             dpd.users.post(scope.user, function (result, err) {
-                defer.promise.then(function(err){
+                defer.promise.then(function (err) {
                     if (err) {
                         scope.loader = ''
                         scope.showError = true;
