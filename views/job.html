@@ -2,7 +2,7 @@
     <div class="row">
         <div class="column">
             <form class="ui form {{loader}} raised fluid segment" name="jobForm" style="max-width:500px;margin:auto">
-                <h5>Job For {{company}}</h5>
+                <h5>Job For {{company.name}}</h5>
                 <div class="ui divider"></div>
                 <div class="required field">
                     <label>Job</label>
@@ -13,9 +13,9 @@
                 </div>
                 <div class="field">
                     <label>Description</label>
-                    <textarea></textarea>
+                    <textarea ng-model="job.description" required></textarea>
                 </div>
-                <input class="btn btn-success" type="submit" value="login" ng-disabled="jobForm.$invalid" ng-click="login()" />
+                <input class="btn btn-success" type="submit" value="save" ng-disabled="jobForm.$invalid" ng-click="save()" />
             </form>
         </div>
     </div>

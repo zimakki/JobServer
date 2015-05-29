@@ -9,5 +9,8 @@ jobs.config(function ($routeProvider) {
     }).when('/admin_companies', {
         controller: 'admin_companies',
         templateUrl: 'views/admin_companies.html'
+    }).when('/job',{
+        controller:'job',
+        templateUrl:'views/job.html'
     })
 })
