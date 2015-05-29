@@ -17,7 +17,7 @@
     <hr>
     <div class="ui cards">
         <div class="card" ng-repeat="all_companies in companies" style="width:324px">
-			<div class="content">
+            <div class="content">
                 <div class="ui top attached label massive">{{all_companies.name}}</div>
                 <div class="description" style="height:50px">
                     <p id="truncate">{{all_companies.description}}</p>
@@ -40,12 +40,12 @@
 
 
 
-<div class="ui custom popup flowing"
-    style="width:500px"
-    ng-include="'views/partials/new_company_partial.html'">
+<div class="ui custom popup flowing" style="width:500px" ng-include="'views/partials/new_company_partial.html'">
 </div>
 
 <script>
     var module = document.getElementById("truncate");
-        $clamp(module, {clamp: 3});
+    $clamp(module, {
+        clamp: 3
+    });
 </script>

@@ -10,7 +10,7 @@ jobs.controller('login', function ($scope, $rootScope, $location, loginFactory) 
     }
 
     $scope.login = function () {
-        $rootScope.loader = 'loading'
-        loginFactory.login($scope)
-    }
+     $rootScope.loader = 'loading'
+     loginFactory.login($scope)
+ }
 })
